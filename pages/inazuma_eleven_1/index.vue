@@ -66,20 +66,20 @@
                         <tr v-for="player in filteredPlayers" :key="player.player_id">
                             <td>{{ player.fullname }}</td>
                             <td>{{ player.nickname }}</td>
-                            <td>{{ player.position }}</td>
-                            <td>{{ player.gender }}</td>
+                            <td :class="{ 'GK': player.position === 'GK', 'DF': player.position === 'DF', 'MF': player.position === 'MF', 'FW': player.position === 'FW' }">{{ player.position }}</td>
+                            <td :class="{ 'male': player.gender === 'Male', 'female': player.gender === 'Female' }">{{ player.gender }}</td>
                             <td>{{ player.size }}</td>
-                            <td>{{ player.element }}</td>
-                            <td>{{ player.fp }}</td>
-                            <td>{{ player.tp }}</td>
-                            <td>{{ player.kick }}</td>
-                            <td>{{ player.body }}</td>
-                            <td>{{ player.control }}</td>
-                            <td>{{ player.guard }}</td>
-                            <td>{{ player.speed }}</td>
-                            <td>{{ player.stamina }}</td>
-                            <td>{{ player.guts }}</td>
-                            <td>{{ player.freedom }}</td>
+                            <td :class="{ 'earth': player.element === 'Earth', 'air': player.element === 'Air', 'fire': player.element === 'Fire', 'wood': player.element === 'Wood' }">{{ player.element }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.fp / 2) / 100})` }">{{ player.fp }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.tp / 2) / 100})` }">{{ player.tp }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.kick / 1.3) / 100})` }">{{ player.kick }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.body / 1.3) / 100})` }">{{ player.body }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.control / 1.3) / 100})` }">{{ player.control }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.guard / 1.3) / 100})` }">{{ player.guard }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.speed / 1.3) / 100})` }">{{ player.speed }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.stamina / 1.3) / 100})` }">{{ player.stamina }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.guts / 1.3) / 100})` }">{{ player.guts }}</td>
+                            <td :style="{ 'background': `rgba(0, 127.5, 255, ${(player.freedom * 2) / 100})` }">{{ player.freedom }}</td>
                         </tr>
                     </tbody>
 
@@ -236,6 +236,46 @@ select{
 
 .reset{
     margin: 30px 0px;
+}
+
+.earth {
+  background-color: rgba(120, 74, 74);
+}
+
+.air {
+  background-color: rgb(33, 80, 143);
+}
+
+.fire {
+  background-color: rgb(234, 50, 50);
+}
+
+.wood {
+  background-color: rgb(35, 74, 44);
+}
+
+.male{
+    color: rgb(85, 85, 255);
+}
+
+.female{
+    color: rgb(225, 124, 218);
+}
+
+.GK{
+    color: #806767;
+}
+
+.DF{
+    color: #2b6332;
+}
+
+.MF{
+    color: #373fca;
+}
+
+.FW{
+    color: #d33131;
 }
 
 </style>

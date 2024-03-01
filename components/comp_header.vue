@@ -14,6 +14,9 @@
             <li>
                 <RouterLink to="/inazuma_eleven_1/">Cheats</RouterLink>
             </li>
+            <li>
+                <RouterLink to="/inazuma_eleven_1/">Extreme Training</RouterLink>
+            </li>
         </ul>
         <ul>
             <p>Inazuma Eleven 2</p>
@@ -29,6 +32,9 @@
             <li>
                 <RouterLink to="/inazuma_eleven_1/">Cheats</RouterLink>
             </li>
+            <li>
+                <RouterLink to="/inazuma_eleven_1/">Extreme Training</RouterLink>
+            </li>
         </ul>
         <ul>
             <p>Inazuma Eleven 3</p>
@@ -43,6 +49,9 @@
             </li>
             <li>
                 <RouterLink to="/inazuma_eleven_1/">Cheats</RouterLink>
+            </li>
+            <li>
+                <RouterLink to="/inazuma_eleven_1/">Extreme Training</RouterLink>
             </li>
         </ul>
     </div>
@@ -62,7 +71,7 @@
     overflow-y: scroll;
 
     ul{
-        margin-bottom: 30px;
+        margin-top: 50px;
     }
 
     ul p{

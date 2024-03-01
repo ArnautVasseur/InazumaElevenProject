@@ -22,7 +22,6 @@ button{
 button:hover{
     background: white;
     color: $primary-color;
-    letter-spacing: 1px;
 }
 
 </style>
