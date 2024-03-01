@@ -1,6 +1,6 @@
 <template>
     <main>
-        <comp_header/>
+        
     </main>
 </template>
 
@@ -8,6 +8,6 @@
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

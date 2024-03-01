@@ -1,0 +1,22 @@
+//Colors
+$primary-color: rgb(15, 23, 42);
+$nav-color: rgb(25, 41, 78);
+$nav_text-color: rgb(148 163 184);
+
+
+$text_button-color: #b2b2b2;
+
+
+//Typography
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$NotoSans: "Noto Sans";
+$desktop_article_title: 2.25rem;
+$desktop_h1: 4rem;
+$desktop_h2: 2rem;
+$desktop_large: 1.125rem;
+$desktop_regular: 1rem;
+$desktop_small: 0.875rem;
+$desktop_caption: 0.750rem;
+
+$duration: .5s;

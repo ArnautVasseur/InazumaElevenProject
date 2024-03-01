@@ -1,11 +1,21 @@
 <template>
-  <div>
-
+  <main>
+    
     <NuxtPage/>
 
-  </div>
+  </main>
 </template>
 
 <script setup>
 
 </script>
+
+<style scoped lang="scss">
+
+main{
+  height: 100vh;
+}
+
+
+
+</style>
