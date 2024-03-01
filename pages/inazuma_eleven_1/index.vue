@@ -9,7 +9,12 @@
                 <div class="filters">
                     <input v-model="filters.fullName" placeholder="Full Name" />
                     <input v-model="filters.nickName" placeholder="Nick Name" />
-                    <input v-model="filters.position" placeholder="Position" />
+                    <select v-model="filters.position" placeholder="Position">
+                        <option value="GoalKeeper">GoalKeeper</option>
+                        <option value="Defender">Defender</option>
+                        <option value="Midfielder">Midfielder</option>
+                        <option value="Forward">Forward</option>
+                    </select>
                     <input v-model="filters.gender" placeholder="Gender" />
                     <input v-model="filters.size" placeholder="Size" />
                     <input v-model="filters.element" placeholder="Element" />
@@ -141,7 +146,7 @@ const sortBy = (column) => {
 }
 
 .leftspace{
-    width: 40%;
+    width: 23%;
 }
 
 main{
@@ -186,6 +191,14 @@ thead tr th{
 
 ::placeholder{
     color: #b0b0b0;
+}
+
+select{
+    all: unset;
+    border: 2px solid white;
+    font-size: 18px;
+    color: white;
+    background-color: $primary-color;
 }
 
 </style>

@@ -57,10 +57,8 @@
 .header{
     width: 300px;
     height: 95vh;
-    background: $nav-color;
-    padding: 50px;
+    border-right: 3px solid $nav-color;
     font-family: $NotoSans, serif;
-
     overflow-y: scroll;
 
     ul{
