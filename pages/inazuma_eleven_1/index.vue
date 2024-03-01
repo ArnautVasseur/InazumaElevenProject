@@ -112,8 +112,12 @@ const filteredPlayers = computed(() => {
   return players.value.filter((player) => {
     // Customize the filtering logic for each column
     return (
-      player.fullname.toLowerCase().includes(filters.fullName.toLowerCase())
-      // Add similar conditions for other columns
+        player.fullname.toLowerCase().includes(filters.fullName.toLowerCase()) &&
+        player.nickname.toLowerCase().includes(filters.nickName.toLowerCase()) &&
+        player.position.includes(filters.position) &&
+        player.gender.includes(filters.gender) &&
+        player.size.includes(filters.size) &&
+        player.element.includes(filters.element)
     );
   });
 });
