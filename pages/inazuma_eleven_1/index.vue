@@ -10,14 +10,30 @@
                     <input v-model="filters.fullName" placeholder="Full Name" />
                     <input v-model="filters.nickName" placeholder="Nick Name" />
                     <select v-model="filters.position" placeholder="Position">
-                        <option value="GoalKeeper">GoalKeeper</option>
-                        <option value="Defender">Defender</option>
-                        <option value="Midfielder">Midfielder</option>
-                        <option value="Forward">Forward</option>
+                        <option value="" disabled selected="selected">Position</option>
+                        <option value="GK">Goakeeper</option>
+                        <option value="DF">Defender</option>
+                        <option value="MF">Midfielder</option>
+                        <option value="FW">Forward</option>
                     </select>
-                    <input v-model="filters.gender" placeholder="Gender" />
-                    <input v-model="filters.size" placeholder="Size" />
-                    <input v-model="filters.element" placeholder="Element" />
+                    <select v-model="filters.gender" placeholder="Gender">
+                        <option value="" disabled selected="selected">Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <select v-model="filters.size" placeholder="Size">
+                        <option value="" disabled selected="selected">Size</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+                    <select v-model="filters.element" placeholder="Element">
+                        <option value="" disabled selected="selected">Element</option>
+                        <option value="Air">Air</option>
+                        <option value="Earth">Earth</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Wood">Wood</option>
+                    </select>
                 </div>
 
                 <table>
@@ -146,7 +162,7 @@ const sortBy = (column) => {
 }
 
 .leftspace{
-    width: 23%;
+    width: 26%;
 }
 
 main{
@@ -194,11 +210,12 @@ thead tr th{
 }
 
 select{
-    all: unset;
-    border: 2px solid white;
-    font-size: 18px;
+    border: 1px solid white;
     color: white;
     background-color: $primary-color;
+    font-size: 1rem;
+    text-indent: 5px;
+    width: 100%;
 }
 
 </style>
