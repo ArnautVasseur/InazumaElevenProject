@@ -36,6 +36,10 @@
                     </select>
                 </div>
 
+                <comp_button class="reset" @click="resetFilters()">
+                    Reset all filters
+                </comp_button>
+
                 <table>
                     <thead>
                         <tr>
@@ -110,7 +114,6 @@ onMounted(async () => {
 
 const filteredPlayers = computed(() => {
   return players.value.filter((player) => {
-    // Customize the filtering logic for each column
     return (
         player.fullname.toLowerCase().includes(filters.fullName.toLowerCase()) &&
         player.nickname.toLowerCase().includes(filters.nickName.toLowerCase()) &&
@@ -121,6 +124,16 @@ const filteredPlayers = computed(() => {
     );
   });
 });
+
+const resetFilters = () => {
+    filters.fullName = "",
+    filters.nickName = "",
+    filters.position = "",
+    filters.gender = "",
+    filters.size = "",
+    filters.element = "";
+}
+    
 
 const sortOrders = {};
 
@@ -199,7 +212,6 @@ thead tr th{
 .filters{
     display: flex;
     gap: 50px;
-    margin-bottom: 50px;
 
     input{
         background: none;
@@ -220,6 +232,10 @@ select{
     font-size: 1rem;
     text-indent: 5px;
     width: 100%;
+}
+
+.reset{
+    margin: 30px 0px;
 }
 
 </style>
